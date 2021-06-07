@@ -5,3 +5,17 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+	20.times do 
+    i = Item.create!(
+      title: Faker::Mountain.name,
+      price: Faker::Number.decimal(l_digits: 2),
+      description: Faker::Marketing.buzzwords,
+      image_url: Faker::Marketing.buzzwords
+    )
+    i.errors.messages
+  end
+	
+puts "%" * 50
+puts "           Base de données remplie !"
+puts "%" * 50
